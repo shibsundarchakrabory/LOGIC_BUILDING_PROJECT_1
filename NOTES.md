@@ -1,6 +1,8 @@
 # NOTES  
 
-> ## css boilerplate
+> ## CREATING ASNAKE GAME
+
+> ## css boilerplate  
 
 ```css
 
