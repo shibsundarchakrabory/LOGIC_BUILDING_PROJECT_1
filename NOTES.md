@@ -35,3 +35,18 @@
 
 
 ```  
+
+## for propef grg
+
+### this means theat the evry block will be 30/30 and the reamaining extra space will be devided between the boxex in a column  
+
+```css
+  grid-template-columns:repeat(auto-fill, minmax(30px, 1fr));
+  
+```
+
+### this means theat the evry block will be 30/30 and the reamaining extra space will be devided between the boxex in a row
+
+```css
+  grid-template-rows: repeat(auto-fill, minmax(30px, 1fr));
+```

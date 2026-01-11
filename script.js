@@ -18,5 +18,5 @@ for (let i = 0; i < cols * rows; i++) {
 
 
 
-console.log("hi");
+// console.log("hi");
 // Write your logic here
