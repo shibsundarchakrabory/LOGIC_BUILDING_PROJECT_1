@@ -4,7 +4,7 @@
   --bg-primary-color: #000000;
   --secondary-color: #ffffff;
   --bg-color: #ffffff;
-
+  
   /* Text variables */
   --text-color: #ffffff;
   
@@ -16,10 +16,10 @@
   --space-xl:32px;
   --space-2xl:40px;
   --space-3xl:48px;
-
+  
   /* *border colors */
   --border-primery:#212121;
-
+  
   /* border radious */
   --border-radius-xs: 4px;
   --border-radius-sm: 8px;
@@ -28,7 +28,9 @@
   --border-radius-xl: 20px;
   --border-radius-2xl: 24px;
   
-
+  /* * game variables */
+  --bg-fill-color:#65eb89;
+  --food-color-bg:#ffaaaa;  
   
 
 }
@@ -80,14 +82,32 @@ section .infos{
   border: 2px solid var(--border-primery);
   flex-grow: 1;
   display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(30px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(30px, 1fr));
+  grid-template-columns:repeat(auto-fill, minmax(50px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
 }
 
 
 .block{
-  height: 30px;
-  width:  30px;
-  border: 1px solid var(--border-primery);
-  
+  /* height: 30px;
+  width:  30px; */
+  border: 1px solid var(--border-primery);  
+  border-radius: var(--border-radius-xs);
+}
+
+.fill{
+  background: var(--bg-fill-color);
+  color: var(--bg-primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+}
+
+.food{
+  background: var(--food-color-bg);
+  color: var(--bg-primary-color);
+  border-radius: var(--border-radius-2xl);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
