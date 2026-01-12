@@ -27,6 +27,8 @@
   --border-radius-lg: 16px;
   --border-radius-xl: 20px;
   --border-radius-2xl: 24px;
+  --border-radius-50-Pencent: 50%;
+  
   
   /* * game variables */
   --bg-fill-color:#65eb89;
@@ -114,6 +116,12 @@ section .infos{
   justify-content: center;
   align-items: center;
   /* text-align: center; */
+}
+
+
+.snake{
+  border-radius: var(--border-radius-50-Pencent);
+
 }
 
 .food{

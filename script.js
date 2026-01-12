@@ -105,7 +105,7 @@ function render() {
   // Draw the snake
   snake.forEach((segment) => {
     if (blocks[`${segment.x}-${segment.y}`]) {
-      blocks[`${segment.x}-${segment.y}`].classList.add("fill");
+      blocks[`${segment.x}-${segment.y}`].classList.add("fill", "snake");   // * snake style
     }
   });
 }
