@@ -55,6 +55,9 @@ body {
   line-height: 1.5;
 }
 
+.icon{
+  border-radius: 20px;
+}
 
 main, section {
   height: 100%;
@@ -122,6 +125,11 @@ section .infos{
 .snake{
   border-radius: var(--border-radius-50-Pencent);
 
+}
+.snake-head{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .food{
