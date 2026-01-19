@@ -9,8 +9,19 @@ const heighscoreElement = document.querySelector("#high-score");
 const scoreElement = document.querySelector("#score");
 const timeElement = document.querySelector("#time");
 
-const blockHeight = 50;
-const blockWidth = 50;
+// Calculate block size dynamically (e.g., 1/20th of the smaller screen dimension)
+const blockSize = Math.max(
+  20,
+  Math.floor(Math.min(window.innerWidth, window.innerHeight) / 20)
+);
+const blockHeight = blockSize;
+const blockWidth = blockSize;
+board.style.setProperty("--block-size", `${blockSize}px`);
+
+const upBtn = document.querySelector("#upBtn");
+const leftBtn = document.querySelector("#leftBtn");
+const rightBtn = document.querySelector("#rightBtn");
+const downBtn = document.querySelector("#downBtn");
 
 let heighscore = localStorage.getItem("heighScore") || 0;
 let score = 0;
@@ -105,7 +116,7 @@ function render() {
   // Draw the snake
   snake.forEach((segment) => {
     if (blocks[`${segment.x}-${segment.y}`]) {
-      blocks[`${segment.x}-${segment.y}`].classList.add("fill", "snake");   // * snake style
+      blocks[`${segment.x}-${segment.y}`].classList.add("fill", "snake"); // * snake style
     }
   });
 }
@@ -129,7 +140,9 @@ startButton.addEventListener(
         sec += 1;
       }
 
-      time = `${min.toString().padStart(2, "0")}-${sec.toString().padStart(2, "0")}`;
+      time = `${min.toString().padStart(2, "0")}-${sec
+        .toString()
+        .padStart(2, "0")}`;
       timeElement.innerText = time;
     }, 1000);
   }
@@ -185,7 +198,49 @@ addEventListener("keydown", (event) => {
         directions = "right";
       }
       break;
+    case "w":
+      if (directions !== "down") {
+        directions = "up";
+      }
+      break;
+    case "s":
+      if (directions !== "up") {
+        directions = "down";
+      }
+      break;
+    case "a":
+      if (directions !== "right") {
+        directions = "left";
+      }
+      break;
+    case "d":
+      if (directions !== "left") {
+        directions = "right";
+      }
+      break;
   }
 });
 
-// render();
+upBtn.addEventListener("click", () => {
+  if (directions !== "down") {
+    directions = "up";
+  }
+});
+
+leftBtn.addEventListener("click", () => {
+  if (directions !== "right") {
+    directions = "left";
+  }
+});
+
+rightBtn.addEventListener("click", () => {
+  if (directions !== "left") {
+    directions = "right";
+  }
+});
+
+downBtn.addEventListener("click", () => {
+  if (directions !== "up") {
+    directions = "down";
+  }
+});

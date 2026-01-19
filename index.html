@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="icon" type="image/png" href="icon.png" />
     <title>SNAKE GAME</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -31,14 +31,22 @@
           </div>
         </div>
         <div class="board"></div>
+        <div class="controls">
+          <button id="upBtn" class="control-btns">up</button>
+          <button id="leftBtn" class="control-btns">left</button>
+          <button id="rightBtn" class="control-btns">right</button>
+          <button id="downBtn" class="control-btns">down</button>
+        </div>
       </section>
       <div class="modal">
+
         <div class="start-game">
           <img class="icon" src="icon.png" alt="snake_game" width="200" border-radius="30px" />
           <h2>Wellcome to Snake Game</h3>
             <button class="btn btn-start">START</button>
-            <p>this game is created to play on pc the</p>
-            <p>mobite feature is comming soon</p>
+            <p>use the ⬆️➡️⬅️⬇️ on the keyboard to play</p>
+            <p>Or use the A, S, D, W on the keyboard to play</p>
+            <p>Or the given Buttons for mobile to play</p>
           </div>
           <div class="game-over">
           <img class="icon" src="icon.png" alt="snake_game" width="200" border-radius="30px" />

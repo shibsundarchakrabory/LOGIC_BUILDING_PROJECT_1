@@ -100,8 +100,8 @@ section .infos{
   border: 2px solid var(--border-primery);
   flex-grow: 1;
   display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(50px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+  grid-template-columns:repeat(auto-fill, minmax(var(--block-size, 50px), 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(var(--block-size, 50px), 1fr));
 }
 
 
@@ -142,10 +142,12 @@ section .infos{
 }
 
 .modal{
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   position: fixed;
   top: 0;
+  left: 0;
+  z-index: 10;
   background: #00000060;
   backdrop-filter:blur(4px);
   display: flex;
@@ -164,4 +166,30 @@ section .infos{
 
 .modal .game-over{
   display: none;
+}
+
+
+.controls{
+  width: 100%;
+  padding: 5px 10px;
+  border: 2px solid var(--border-primery);
+  border-radius: var(--border-radius-sm);
+  gap: var(--space-md);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.control-btns{
+  width: 100px;
+  font-size: large;
+  padding: var(--space-sm) var(--space-md);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.control-btns:hover{
+  transform: scale(1.1);
 }
