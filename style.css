@@ -182,8 +182,9 @@ section .infos{
 
 .control-btns{
   width: 100px;
-  font-size: large;
-  padding: var(--space-sm) var(--space-md);
+  /* flex-grow: 1; */
+  font-size: 30px;
+  padding: var(--space-sm) var(--space-xs);
   border: none;
   border-radius: var(--border-radius-sm);
   cursor: pointer;
@@ -192,4 +193,16 @@ section .infos{
 
 .control-btns:hover{
   transform: scale(1.1);
+}
+
+
+.up-down{
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  
+}
+
+.right-left{
+  height: 100%;
 }

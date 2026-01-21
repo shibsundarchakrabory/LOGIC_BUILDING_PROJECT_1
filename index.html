@@ -32,13 +32,23 @@
         </div>
         <div class="board"></div>
         <div class="controls">
-          <button id="upBtn" class="control-btns">⬆️</button>
-          <button id="leftBtn" class="control-btns">⬅️</button>
-          <button id="rightBtn" class="control-btns">➡️</button>
-          <button id="downBtn" class="control-btns">⬇️</button>
+          <button id="leftBtn" class="control-btns right-left">
+            <img src="./arrow-big-left.svg" alt="" />
+          </button>
+          <div class="up-down">
+            <button id="upBtn" class="control-btns">
+              <img src="./arrow-big-up.svg" alt="" />
+            </button>
+            <button id="downBtn" class="control-btns">
+              <img src="./arrow-big-down.svg" alt="" />
+            </button>
+          </div>
+          <button id="rightBtn" class="control-btns right-left">
+            <img src="./arrow-big-right.svg" alt="" />
+          </button>
         </div>
       </section>
-      <div class="modal">
+      <!-- <div class="modal">
 
         <div class="start-game">
           <img class="icon" src="icon.png" alt="snake_game" width="200" border-radius="30px" />
@@ -54,7 +64,7 @@
           <h4>Try Agane You Can Do It</h4>
           <button class="btn btn-restart">RESTART</button>
         </div>
-      </div>
+      </div> -->
     </main>
     <script src="script.js"></script>
   </body>
